@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Welcome to iCode - Coding Forum</title>
 </head>
@@ -16,7 +15,7 @@
 <body>
     <!-- Navbar -->
     <?php include "partials/_header.php"; ?>
-    
+
     <!-- Search Results -->
     <div class="container w-50 mx-auto my-3">
         <h1 class="text-center">Search results for <em>"<?php echo $_GET['search'] ?>"</em></h1>
@@ -37,12 +36,12 @@
             $thread_title = $row['thread_title'];
             $thread_desc = $row['thread_description'];
             $url = "threadlist.php?threadid=$thread_id";
-            
+
             echo '<div>
                     <h3>
-                        <a href="'. $url .'" class="text-primary">'. $counter .'. '. $thread_title .'</a>
+                        <a href="' . $url . '" class="text-primary">' . $counter . '. ' . $thread_title . '</a>
                     </h3>
-                    <p class="ms-4">'. $thread_desc .'</p>
+                    <p class="ms-4">' . $thread_desc . '</p>
                 </div>';
         }
         if ($noResult) {
@@ -56,7 +55,6 @@
                 </div>';
         }
         echo '<hr class="mt-5">';
-
         echo '<h1 class="mt-5">Comments</h1>';
         $sql2 = "SELECT * FROM `comments` WHERE MATCH (`comment_content`) AGAINST ('$query');";
         $result2 = mysqli_query($conn, $sql2);
@@ -69,7 +67,7 @@
             $uri = "threadlist.php?threadid=$cthread_id";
             echo '<div>
                     <h4>
-                        <a href="'. $uri .'" class="text-dark text-decoration-none">'. $counter2 .'. "'. $comment .'"</a>
+                        <a href="' . $uri . '" class="text-dark text-decoration-none">' . $counter2 . '. "' . $comment . '"</a>
                     </h4>
                 </div>';
         }
@@ -84,7 +82,6 @@
                 </div>';
         }
         ?>
-
     </div>
 
     <?php
@@ -93,8 +90,7 @@
     include "partials/_signup_modal.php";
     ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 
