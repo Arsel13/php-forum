@@ -25,7 +25,6 @@
                 </div>';
         header('Refresh: 1; url=index.php');
     }
-
     if (
         isset($_GET['signupsuccess']) && $_GET['signupsuccess'] == "false" && $_GET['error']
         && $_GET['error'] == "Username already in use"
@@ -36,7 +35,6 @@
         </div>';
         header('Refresh: 1; url=index.php');
     }
-
     if (
         isset($_GET['signupsuccess']) && $_GET['signupsuccess'] == "false" && $_GET['error']
         && $_GET['error'] == "Passwords do not match"
@@ -47,7 +45,6 @@
         </div>';
         header('Refresh: 1; url=index.php');
     }
-
     if (
         isset($_GET['signupsuccess']) && $_GET['signupsuccess'] == "false" && $_GET['error']
         && $_GET['error'] == "Do not use special characters"
@@ -58,7 +55,6 @@
         </div>';
         header('Refresh: 1; url=index.php');
     }
-
     if (isset($_GET['loginsuccess']) && $_GET['loginsuccess'] == "true") {
         echo '<div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
         <strong>Success!</strong> You are successfully logged in to iCode.
@@ -66,7 +62,6 @@
         </div>';
         header('Refresh: 1; url=index.php');
     }
-
     if (
         isset($_GET['loginsuccess']) && $_GET['loginsuccess'] == "false"  && $_GET['error']
         && $_GET['error'] == "Invalid password"
@@ -77,7 +72,6 @@
         </div>';
         header('Refresh: 1; url=index.php');
     }
-
     if (
         isset($_GET['loginsuccess']) && $_GET['loginsuccess'] == "false"  && $_GET['error']
         && $_GET['error'] == "User does not exist"
@@ -88,7 +82,6 @@
         </div>';
         header('Refresh: 1; url=index.php');
     }
-
     if (
         isset($_GET['loginsuccess']) && $_GET['loginsuccess'] == "false" && $_GET['error']
         && $_GET['error'] == "Do not use special characters"
@@ -99,7 +92,6 @@
         </div>';
         header('Refresh: 1; url=index.php');
     }
-
     if (
         isset($_GET['catsuccess']) && $_GET['catsuccess'] == "false" && $_GET['error']
         && $_GET['error'] == "Category already exists"
@@ -110,7 +102,6 @@
         </div>';
         header('Refresh: 1; url=index.php');
     }
-
     if (
         isset($_GET['catsuccess']) && $_GET['catsuccess'] == "true"
     ) {
@@ -120,7 +111,6 @@
         </div>';
         header('Refresh: 1; url=index.php');
     }
-
     if (
         isset($_GET['catsuccess']) && $_GET['catsuccess'] == "false" && $_GET['error']
         && $_GET['error'] == "Do not use special characters"
