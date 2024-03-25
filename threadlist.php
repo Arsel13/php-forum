@@ -97,7 +97,6 @@
         <h2 class="mb-3">Discussions</h2>
         <?php
         include "partials/db_connection.php";
-
         $sql2 = "SELECT * FROM `comments` where thread_id=$id";
         $result2 = mysqli_query($conn, $sql2);
         $noComment = true;
@@ -107,11 +106,9 @@
             $comment_content = $row['comment_content'];
             $comment_by = $row['comment_by'];
             $comment_time = $row['comment_time'];
-
             $sql4 = "SELECT * FROM `profiles` WHERE `user_name` = '$comment_by'";
             $result4 = mysqli_query($conn, $sql4);
             $row4 = mysqli_fetch_assoc($result4);
-
             if ($row4 > 0) {
                 $user_image = $row4['image_url'];
                 echo '        
@@ -129,8 +126,7 @@
                         </p>
                     </div>
                 </div>';
-            } 
-            else {
+            } else {
                 echo '        
                 <div class="d-flex my-2">
                     <div>
